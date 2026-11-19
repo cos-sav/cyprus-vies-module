@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Cyprus VIES</AssemblyName>
+    <!-- Release number: bump on every release and add a line to CHANGELOG.md. Shown in Help > About. -->
+    <Version>1.7.4</Version>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <!-- Only the version attributes are generated; the rest stays in Properties\AssemblyInfo.cs. -->
+    <GenerateAssemblyTitleAttribute>False</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyCompanyAttribute>False</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>False</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>False</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyDescriptionAttribute>False</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>False</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyTrademarkAttribute>False</GenerateAssemblyTrademarkAttribute>
+    <GenerateTargetFrameworkAttribute>False</GenerateTargetFrameworkAttribute>
+    <GenerateNeutralResourcesLanguageAttribute>False</GenerateNeutralResourcesLanguageAttribute>
+    <IncludeSourceRevisionInInformationalVersion>False</IncludeSourceRevisionInInformationalVersion>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms Condition="'$(OS)' == 'Windows_NT'">True</UseWindowsForms>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xSageDataObjects\xSageDataObjects.csproj" />
+    <ProjectReference Include="..\xSADReports\xSADReports.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data.SqlServerCe"><HintPath>$(LibDir)System.Data.SqlServerCe.dll</HintPath></Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1"><HintPath>$(LibDir)DevExpress.XtraReports.v10.1.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Database\xSAD-VIESv1.sdf" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

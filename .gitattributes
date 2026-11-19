@@ -1,0 +1,5 @@
+*.dll binary
+*.msi binary
+*.pdf binary
+*.sdf binary
+*.resx text

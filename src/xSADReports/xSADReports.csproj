@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>xSADReports</AssemblyName>
+    <UseWindowsForms Condition="'$(OS)' == 'Windows_NT'">True</UseWindowsForms>
+    <RootNamespace />
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="xSADReports.dll.licenses" />
+    <EmbeddedResource Include="xSADReports.dll.licenses" LogicalName="xSADReports.dll.licenses" />
+    <!-- Empty resource sets kept so the ResourceManager lookups match the original build. -->
+    <EmbeddedResource Include="xSADReports.Resources.resources" LogicalName="xSADReports.Resources.resources" />
+    <EmbeddedResource Include="xSADReports.rptVIESAnalysis.resources" LogicalName="xSADReports.rptVIESAnalysis.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="DevExpress.XtraPrinting.v10.1"><HintPath>$(LibDir)DevExpress.XtraPrinting.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.XtraBars.v10.1"><HintPath>$(LibDir)DevExpress.XtraBars.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.1"><HintPath>$(LibDir)DevExpress.XtraEditors.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.XtraWizard.v10.1"><HintPath>$(LibDir)DevExpress.XtraWizard.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1"><HintPath>$(LibDir)DevExpress.XtraReports.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.Data.v10.1"><HintPath>$(LibDir)DevExpress.Data.v10.1.dll</HintPath></Reference>
+    <Reference Include="DevExpress.Utils.v10.1"><HintPath>$(LibDir)DevExpress.Utils.v10.1.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

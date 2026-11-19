@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>11.0</LangVersion>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <LibDir>$(MSBuildThisFileDirectory)lib\</LibDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Lets the solution build without Visual Studio's targeting packs installed (also on non-Windows build agents). -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

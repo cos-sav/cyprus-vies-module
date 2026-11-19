@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+packages/
+TestResults/
+*.log
+*.zip
+*.pdb
+Thumbs.db
+.DS_Store
